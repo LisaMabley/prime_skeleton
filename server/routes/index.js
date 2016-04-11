@@ -25,7 +25,6 @@ router.get('/lambicorns', function(request, response, next) {
 });
 
 router.get('/', function(request, response) {
-  console.log('Router functioning');
   response.sendFile(path.join(__dirname, '../public/views/index.html'));
 });
 
