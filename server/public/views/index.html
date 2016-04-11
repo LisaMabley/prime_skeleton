@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="skeletonApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Walking Skeleton</title>
+    <script src="/vendor/angular/angular.min.js" type="text/javascript"></script>
+    <script src="/assets/scripts/client.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+     <div ng-controller="IndexController">
+         <p ng-show="lambicorn.name">Your new lambicorn's name is: {{ lambicorn.name }}</p>
+         <p ng-hide="lambicorn.name">Enter your new lambicorn's name!</p>
+
+         <form novalidate>
+             Name: <input type="text" ng-model="lambicorn.name" /><br />
+             <input type="submit" ng-click="add(lambicorn)" value="Save"/>
+         </form>
+
+         <h4>Lambicorns</h4>
+         <ul>
+             <li ng-repeat="lambicorn in lambicornList">{{ lambicorn.name }}</li>
+         </ul>
+     </div>
+  </body>
+</html>
